@@ -55,12 +55,7 @@ public class ContributorRewardHandler {
 		name = Minecraft.getInstance().getUser().getName().toLowerCase(Locale.ROOT);
 	}
 
-	public static void init() {
-		if (thread != null && thread.isAlive())
-			return;
-
-		thread = new ThreadContributorListLoader();
-	}
+	public static void init() {}
 
 	public static int getTier(Player player) {
 		return getTier(player.getGameProfile().getName());
